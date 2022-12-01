@@ -1,0 +1,126 @@
+$main: #ffe436;
+$bg: #1c1c1c;
+
+
+#navbar {
+  background-color: $main;
+  display: flex;
+  height: 80px;
+
+  padding: 10px 3rem;
+  box-sizing: border-box;
+
+  justify-content: space-between;
+
+  a {
+    color: black;
+    text-decoration: none;
+  
+  &:hover  {
+    color: #1c1c1c;
+    text-decoration: underline;
+  }
+  }
+}
+
+#brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+
+  #title {
+    padding-left: 2rem;
+    font-family: '911 Porscha';
+    font-size: 2rem;
+    line-height: 1rem;
+
+    &:hover * {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.nav {
+  display: none;
+  align-items: center;
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    font-family: '911 Porscha';
+    font-size: 1.5rem;
+    flex-direction: row;
+
+  
+    li {
+      list-style: none;
+      padding: 0 10px;
+    }
+  }
+
+  &.shown {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    left: 0;
+    height: calc(100vh - 80px);
+    background: $main;
+    align-items: center;
+    justify-content: center;
+
+    .nav-container {
+      flex-direction: column;
+    }
+
+    li {
+      font-size: 2rem;
+      padding: 1.5rem;
+    }
+  }
+}
+
+.hamburger {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  .menu {
+    display: block;
+  }
+  .close {
+    display: none;
+  }
+
+  &.shown {
+    .menu {
+      display: none;
+    }
+    .close {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav, .nav.shown {
+    display: flex;
+    width: auto;
+    height: auto;
+    position: relative;
+    background: none;
+    top: 0;
+  
+    .nav-container {
+      flex-direction: row;
+    }
+  }
+}
+
+.menu, .close {
+  font-size: 2rem;
+}

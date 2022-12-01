@@ -1,0 +1,38 @@
+$bg: #1c1c1c;
+
+@font-face {
+  font-family: "911 Porscha";
+  src: url("https://watilist.fr/assets/fonts/911porschav3.ttf");
+}
+
+body {
+  margin: 0;
+  background: #1c1c1c;
+  font-family: 'Montserrat';
+}
+
+main {
+  height: 100%;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 40vh 0;
+  color: #ffe436;
+}
+
+.button {
+  margin-top: 2rem;
+  background: #ffe436;
+  color: #1c1c1c;
+  padding: 1.5rem 5rem;
+  text-decoration: none;
+  transition: opacity 100ms;
+
+  &:hover {
+    opacity: 80%;
+  }
+}
